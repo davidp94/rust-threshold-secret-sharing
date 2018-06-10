@@ -24,8 +24,11 @@ travis-ci = { repository = "snipsco/rust-threshold-secret-sharing" }
 [features]
 paramgen = ["primal"]
 
+[target.'cfg(not(target_env = "sgx"))'.dependencies]
+sgx_tstd = { path = "../../sgx_tstd" }
+
 [dependencies]
-rand = "0.3.*"
+sgx_rand = { path = "../../sgx_rand" }
 primal = { version = "0.2", optional = true }
 
 [dev-dependencies]

@@ -9,6 +9,7 @@
 //! FFT by in-place Cooley-Tukey algorithms.
 
 use super::Field;
+use std::vec::Vec;
 
 /// 2-radix FFT.
 ///

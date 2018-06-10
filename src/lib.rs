@@ -12,8 +12,11 @@
 //! traditional Shamir sharing and its packet (or ramp) variant.
 //! For now, secrets and shares are fixed as prime field elements
 //! represented by `i64` values.
+#![no_std]
 
-extern crate rand;
+extern crate sgx_rand as rand;
+#[macro_use]
+extern crate sgx_tstd as std;
 
 mod fields;
 mod numtheory;
